@@ -1,0 +1,17 @@
+---
+import srcLogo from "@/assets/images/logo.png";
+import { Image } from "astro:assets";
+import MenuItems from "./MenuItems.astro";
+---
+
+<div class="menu-principal">
+    <div class="flex items-center bg-black p-5 justify-between">
+        <div class="logo">
+            <Image src={srcLogo} width={200} alt="Logo" />
+        </div>
+        <MenuItems clase="hidden md:flex" />
+    </div>
+    <div class="bg-black flex md:hidden">
+        <MenuItems clase="flex md:hidden" />
+    </div>
+</div>

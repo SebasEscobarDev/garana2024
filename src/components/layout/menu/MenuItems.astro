@@ -1,0 +1,13 @@
+---
+const { clase } = Astro.props;
+---
+
+<ul class={`${clase} text-white flex-col md:flex-row w-full md:w-auto`}>
+    <li class="flex"><a class="text-center w-full" href="/">Inicio</a></li>
+    <li class="flex">
+        <a class="text-center w-full" href="/acerca-de">Acerca de</a>
+    </li>
+    <li class="flex">
+        <a class="text-center w-full" href="/contacto">Contacto</a>
+    </li>
+</ul>
