@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import hoja from "@/assets/images/bg-resenia.webp";
+import estrella from "@/assets/images/estrella.jpeg";
+import logo from "@/assets/images/instagram-svgrepo-com.svg";
+---
+
+<div class="relative w-full h-[100vh] h-[750px]">
+    <Image src={hoja} alt="Fondo" class="object-cover w-full h-full" />
+
+    <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold mb-12 text-grey relative z-20">
+            Reseñas de nuestros clientes
+        </h1>
+
+        <div class="flex flex-col md:flex-row justify-around w-full max-w-6xl p-12 space-y-6 md:space-y-0 md:space-x-6">
+            <div class="bg-white p-12 border-l-8 border-[rgb(64,151,78)] shadow-md w-full md:w-[calc(100%/3-2rem)] relative">
+                <div class="absolute top-4 left-6 flex justify-center space-x-2 z-10">
+                    <Image src={estrella} width={16} alt="Estrella 1" />
+                    <Image src={estrella} width={16} alt="Estrella 2" />
+                    <Image src={estrella} width={16} alt="Estrella 3" />
+                    <Image src={estrella} width={16} alt="Estrella 4" />
+                    <Image src={estrella} width={16} alt="Estrella 5" />
+                </div>
+                <div class="absolute top-4 right-4">
+                    <Image src={logo} width={50} alt="Logo" />
+                </div>
+                <h2 class="text-xl font-bold mb-2 pl-6 relative">
+                    Título 1
+                    <div class="absolute bottom-[-1rem] left-0 h-0.5 bg-black w-1/2"></div>
+                </h2>
+                <p class="mt-6 pl-6">Texto de la tarjeta 1.</p>
+                <p class="font-bold mt-2 pl-6">Nombre 1</p>
+            </div>
+
+            <div class="bg-white p-12 border-l-8 border-[rgb(64,151,78)] shadow-md w-full md:w-[calc(100%/3-2rem)] relative">
+                <div class="absolute top-4 left-6 flex justify-center space-x-2 z-10">
+                    <Image src={estrella} width={16} alt="Estrella 1" />
+                    <Image src={estrella} width={16} alt="Estrella 2" />
+                    <Image src={estrella} width={16} alt="Estrella 3" />
+                    <Image src={estrella} width={16} alt="Estrella 4" />
+                    <Image src={estrella} width={16} alt="Estrella 5" />
+                </div>
+                <div class="absolute top-4 right-4">
+                    <Image src={logo} width={50} alt="Logo" />
+                </div>
+                <h2 class="text-xl font-bold mb-2 pl-6 relative">
+                    Título 2
+                    <div class="absolute bottom-[-1rem] left-0 h-0.5 bg-black w-1/2"></div>
+                </h2>
+                <p class="mt-6 pl-6">Texto de la tarjeta 2.</p>
+                <p class="font-bold mt-2 pl-6">Nombre 2</p>
+            </div>
+
+            <div class="bg-white p-12 border-l-8 border-[rgb(64,151,78)] shadow-md w-full md:w-[calc(100%/3-2rem)] relative">
+                <div class="absolute top-4 left-6 flex justify-center space-x-2 z-10">
+                    <Image src={estrella} width={16} alt="Estrella 1" />
+                    <Image src={estrella} width={16} alt="Estrella 2" />
+                    <Image src={estrella} width={16} alt="Estrella 3" />
+                    <Image src={estrella} width={16} alt="Estrella 4" />
+                    <Image src={estrella} width={16} alt="Estrella 5" />
+                </div>
+                <div class="absolute top-4 right-4">
+                    <Image src={logo} width={50} alt="Logo" />
+                </div>
+                <h2 class="text-xl font-bold mb-2 pl-6 relative">
+                    Título 3
+                    <div class="absolute bottom-[-1rem] left-0 h-0.5 bg-black w-1/2"></div>
+                </h2>
+                <p class="mt-6 pl-6">Texto de la tarjeta 3.</p>
+                <p class="font-bold mt-2 pl-6">Nombre 3</p>
+            </div>
+        </div>
+    </div>
+</div>

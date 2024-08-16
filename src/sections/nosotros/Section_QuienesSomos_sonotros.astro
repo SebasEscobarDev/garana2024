@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import hoja from "@/assets/images/bg-resenia.webp";
+---
+
+<div class="w-full h-[100vh] bg-cover flex items-center" style={`background-image:url(${hoja.src})`}>
+    <div class="container mx-auto">
+        <div class=" flex items-center justify-center">
+            <div class="flex-1 justify-end flex">
+                <h1 class="text-4xl inline-block font-bold mb-12 text-grey relative z-20 bg-[rgb(204,255,210)] " style="font-family: 'Bebas Neue';">
+                    ¿QUIENES SOMOS?
+                </h1>
+            </div>
+            <p class="text-[20px] pl-20 flex-1" style="font-family: 'Open sans';">
+                Somos una empresa manufacturera colombiana creada en el año 2006, iniciativa de dos mujeres emprendedoras
+                ingenieras industriales quienes en la necesidad de buscar un mejor futuro, unene habilidades y conocimientos
+                para formar la sociedad que hoy se conoce con la marca de garana art, dedicada a la elaboracion y comercializacion
+                de trajes de baño, con una vision enfocada a la responsabilidad social y ambiental
+            </p>
+        </div>
+    </div>
+</div>

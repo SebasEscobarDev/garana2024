@@ -1,0 +1,22 @@
+---
+const { texto } = Astro.props;
+import { Image } from "astro:assets";
+import statistics from "@/assets/images/statistics-svgrepo-com.svg";
+import target from "@/assets/images/target-archer-svgrepo-com.svg";
+import lealtad from "@/assets/images/lealtad.svg";
+---
+
+<div class={`${texto} text-white flex flex-row items-center w-full justify-around p-10`} style="height: 200px; font-family: 'Bebas Neue', sans-serif;">
+    <div class="flex flex-col items-center mb-4">
+        <Image src={lealtad} width={50} alt="Logo" class="mb-2" />
+        <li class="flex w-full"><a class="text-center w-full text-black uppercase">ENVIOS A TODA COLOMBIA</a></li>
+    </div>
+    <div class="flex flex-col items-center mb-4">
+        <Image src={target} width={50} alt="Logo" class="mb-2" />
+        <li class="flex w-full"><a class="text-center w-full text-black uppercase">DISEÑOS ESPECIALMENTE PARA TI</a></li>
+    </div>
+    <div class="flex flex-col items-center mb-4">
+        <Image src={statistics} width={50} alt="Logo" class="mb-2" />
+        <li class="flex w-full"><a class="text-center w-full text-black uppercase">CALIDAD Y COMODIDAD GARANTIZADAS</a></li>
+    </div>
+</div>
