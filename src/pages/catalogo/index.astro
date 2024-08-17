@@ -1,12 +1,11 @@
 ---
 import Html from "@/components/layout/Html.astro";
-import SectionC from "@/sections/home/Section_Categorias.astro";
-import Footer from "@/components/layout/footer/footer.astro";
-import BreadsCrumb from "@/components/layout/bread_crumbs/breads_crumb.astro";
+import SectionC from "@/sections/home/SectionCategorias.astro";
+import BreadsCrumb from "@/components/layout/bread_crumbs/breadsCrumb.astro";
+import SliderCatalogo from "@/assets/images/catalogo/landing-page-2.jpg";
 ---
 
 <Html>
-    <BreadsCrumb/>
+    <BreadsCrumb titulo="CATALOGO" image={SliderCatalogo}/>
     <SectionC />
-    <!-- <Footer/> -->
 </Html>

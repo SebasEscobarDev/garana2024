@@ -1,0 +1,27 @@
+---
+import hoja from "@/assets/images/hoja.jpeg";
+---
+
+<div class="flex items-center justify-center w-full h-[100vh]" style={`background-image: url(${hoja.src})`}>
+    <div class="flex items-center justify-center w-full h-full bg-black bg-opacity-70 hover:bg-opacity-0.9 transition-opacity">
+        <div class="bg-black bg-opacity-50 border border-white border-opacity-50 rounded-[5px] px-20  w-[700px]">
+            <div class="text-center text-white " >
+                <h2 class="text-[80px] p-5" style="font-family: 'Bebas neue'; letter-spacing: 1px; font-weight: 200;">¿QUIENES SOMOS?</h2>
+                <p class="text-[20px]" style="font-family: 'Open Sans';">
+                    La empresa Indecon "Industria de confecciones" se creó en el año 2006, y su objetivo principal es el diseño, 
+                    producción y comercialización de trajes de baño. Actualmente INDECON se encuentra representada bajo la marca 
+                    GARANA ART y está en 22 departamentos de Colombia con más de 80 clientes mayoristas.
+                </p>
+                <div class="mt-10 flex justify-center mb-10 "> 
+                    <button class="flex items-center bg-transparent border border-white border-opacity-50 rounded-[5px] py-2 px-8 text-[20px] text-white hover:bg-white hover:text-black transition-colors" style="font-family: 'Open Sans';">
+                        Conoce más de nosotros 
+                        <svg xmlns="@/assets/images/arrow-sm-right-svgrepo-com.svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18m-6-6l6 6-6 6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,25 @@
+---
+export interface Image {
+  src: string;
+}
+
+interface Props {
+  title: string;
+  imagenes: Image[];
+}
+
+const { title, imagenes } = Astro.props;
+---
+
+<div class="w-full  pt-[118px] ">
+    <h2 class="text-center text-[40px] p-10" style="font-family: 'Bebas Neue';">
+        {title}
+    </h2>
+    <div class="grid grid-cols-4 gap-0 h-full">
+        {imagenes.map((image) => (
+            <div class="">
+                <img src={image.src} class="bg-cover" />
+            </div>
+        ))}
+    </div>
+</div>

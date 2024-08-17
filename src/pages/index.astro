@@ -1,10 +1,10 @@
 ---
 import Html from "@/components/layout/Html.astro";
-import Section1 from "@/sections/home/Section_Banner_Home.astro";
-import Sectionh from "@/sections/home/Section_AcercaDeNosotros_Home.astro";
-import SectionI from "@/sections/home/Sectin_Imagenes_boton.astro";
-import SectionR from "@/sections/home/Section_Reseñas.astro";
-import SectionC from "@/sections/home/Section_Categorias.astro";
+import Section1 from "@/sections/home/SectionBannerHome.astro";
+import Sectionh from "@/sections/home/SectionAcercaDeNosotrosHome.astro";
+import SectionI from "@/sections/home/SectionImagenesBoton.astro";
+import SectionR from "@/sections/home/SectionReseñas.astro";
+import SectionC from "@/sections/home/SectionCategorias.astro";
 import FooterI from "@/components/layout/footer/footer_images.astro";
 import FooterIt from "@/components/layout/footer/footerItems.astro";
 ---
@@ -12,9 +12,9 @@ import FooterIt from "@/components/layout/footer/footerItems.astro";
 <Html>
 	<Section1 />
 	<SectionC/>
-	<Sectionh />
 	<SectionI/>
-	<SectionR/>
-	<FooterIt clase="hidden md:flex" />
+	<Sectionh />
+	<!-- <SectionR/> -->
+	<FooterIt />
 	<FooterI/>
 </Html>

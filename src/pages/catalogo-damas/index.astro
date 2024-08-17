@@ -1,0 +1,18 @@
+---
+import Html from "@/components/layout/Html.astro";
+import Galeria from "@/sections/catalogo/Galeria.astro";
+import malla1 from "@/assets/images/catalogo-dama/mallas/malla-1.jpg";
+import malla2 from "@/assets/images/catalogo-dama/mallas/malla-2.jpg";
+import malla3 from "@/assets/images/catalogo-dama/mallas/malla-3.jpg";
+
+const imagenes = [
+malla1,
+malla2,
+malla3,
+];
+---
+
+<Html>
+    <Galeria title="vestidos" imagenes={imagenes} />
+    <Galeria title="mallas" imagenes={imagenes} />
+</Html> 

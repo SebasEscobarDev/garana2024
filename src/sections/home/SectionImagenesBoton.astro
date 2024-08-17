@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import imagen1 from "@/assets/images/HOME/dama/vestidos/dama-5.jpg";
+import imagen2 from "@/assets/images/HOME/dama/vestidos/dama-1.jpg"
+import imagen3 from "@/assets/images/HOME/dama/vestidos/dama-2.jpg"
+import imagen4 from "@/assets/images/HOME/dama/vestidos/dama-3.jpg"
+---
+
+<div class="container mx-auto p-20 ">
+    <div class="w-full h-[100hv] h-[700px] p-20 flex flex-col items-center">
+        <h1 class="text-[80px]" style="font-family: 'Bebas Neue';font-weight:200;letter-spacing : 1px">CONOCE NUESTRO CATALOGO</h1>
+        <div class="flex gap-10 mb-8 w-full max-w-4xl justify-center pb-5 pt-5">
+            <Image src={imagen1} alt="Imagen 1" class="object-cover w-[250px] h-[350px] " />
+            <Image src={imagen2} alt="Imagen 2" class="object-cover w-[250px] h-[350px] " />
+            <Image src={imagen3} alt="Imagen 2" class="object-cover w-[250px] h-[350px] " />
+            <Image src={imagen4} alt="Imagen 4" class="object-cover w-[250px] h-[350px] " />
+        </div>
+        <button class="text-green-500 border border-green-500 py-3 px-10 rounded-[5px] hover:bg-green-500 hover:text-white transition-colors" style="font-family: 'Open Sans'">
+            VER CATALOGO
+        </button>
+    </div>
+</div>

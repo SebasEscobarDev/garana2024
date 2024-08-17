@@ -1,14 +1,16 @@
 ---
 import Html from "@/components/layout/Html.astro";
-import SectionQuienesSomos from "@/sections/nosotros/Section_QuienesSomos_sonotros.astro";
-import SectionBanner from "@/sections/nosotros/Section_banner_nosotros.astro";
-import SectionQueNosInspira from "@/sections/nosotros/Section_QueNosInspira_Nosotros.astro";
-import SectionPropuestaValor from "@/sections/nosotros/Section_PropuestaValor_Nosotros.astro";
-import SectionNosotrosIconos from "@/sections/nosotros/Section_Nosotros_iconos.astro";
+import SectionQuienesSomos from "@/sections/nosotros/SectionQuienesSomosNosotros.astro";
+import SectionBanner from "@/sections/nosotros/SectionBannerNosotros.astro";
+import SectionQueNosInspira from "@/sections/nosotros/SectionQueNosInspiraNosotros.astro";
+import SectionPropuestaValor from "@/sections/nosotros/SectionPropuestaValorNosotros.astro";
+import SectionNosotrosIconos from "@/sections/nosotros/SectionNosotrosIconos.astro";
+import SliderNosotros from "@/assets/images/nosotros/slider.jpg";
+import BreadsCrumb from "@/components/layout/bread_crumbs/breadsCrumb.astro";
 ---
 
 <Html>
-    <SectionBanner/>
+    <BreadsCrumb titulo="NOSOTROS" image={SliderNosotros}/>
     <SectionQuienesSomos/>
     <SectionQueNosInspira/>
     <SectionPropuestaValor/>

@@ -1,0 +1,26 @@
+---
+import img1 from "@/assets/images/img1.webp";
+import { Image } from "astro:assets";
+---
+
+<div class="container mx-auto p-5">
+    <h1 class="text-center text-[100px] p-20" style="font-family: 'Bebas Neue'; font-weight:200">CATEGORIAS</h1>
+    <div class="flex justify-between items-center">
+        <div class="flex-1 flex justify-center items-center relative">
+            <div class="w-[400px] h-[400px] bg-[rgb(204,255,210)] flex justify-center items-centertransform: translateY(10px) ">
+                <div class=" text-center">
+                    <p class="text-[30px] mb-5" style="font-family: 'Bebas Neue'; font-weight:300;">DAMAS</p>
+                    <Image src={img1} alt="Imagen 1" class="w-[300px]" />
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center items-center relative">
+            <div class="w-[400px] h-[400px] bg-[rgb(204,255,210)] flex justify-center items-center z-0 transform: translateY(-10px)">
+                <div class=" text-center">
+                    <Image src={img1} alt="Imagen 2" class="w-[300px]" />
+                    <p class="text-[30px] mt-5" style="font-family: 'Bebas Neue';">NIÑAS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

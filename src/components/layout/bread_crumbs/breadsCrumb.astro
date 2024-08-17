@@ -1,0 +1,9 @@
+---
+const { titulo, image } = Astro.props;
+---
+
+<div class="w-full flex items-center h-[500px] bg-cover pt-[118px] " style={`background-image:url(${image.src}); background-size:cover;`}>
+    <h1 class="text-white text-[150px] md:text-[150px] xl:text-[200px] ml-[100px] " style="font-family: 'Bebas Neue'; font-weight:200">
+        {titulo}
+    </h1>
+</div>
