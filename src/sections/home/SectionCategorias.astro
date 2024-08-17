@@ -1,26 +1,35 @@
 ---
-import img1 from "@/assets/images/img1.webp";
+import img1 from "@/assets/images/HOME/categorias/damas.jpg";
+import img2 from "@/assets/images/HOME/categorias/ninas.jpg";
 import { Image } from "astro:assets";
 ---
 
-<div class="container mx-auto p-5">
-    <h1 class="text-center text-[100px] p-20" style="font-family: 'Bebas Neue'; font-weight:200">CATEGORIAS</h1>
-    <div class="flex justify-between items-center">
-        <div class="flex-1 flex justify-center items-center relative">
-            <div class="w-[400px] h-[400px] bg-[rgb(204,255,210)] flex justify-center items-centertransform: translateY(10px) ">
-                <div class=" text-center">
-                    <p class="text-[30px] mb-5" style="font-family: 'Bebas Neue'; font-weight:300;">DAMAS</p>
-                    <Image src={img1} alt="Imagen 1" class="w-[300px]" />
-                </div>
-            </div>
-        </div>
-        <div class="flex-1 flex justify-center items-center relative">
-            <div class="w-[400px] h-[400px] bg-[rgb(204,255,210)] flex justify-center items-center z-0 transform: translateY(-10px)">
-                <div class=" text-center">
-                    <Image src={img1} alt="Imagen 2" class="w-[300px]" />
-                    <p class="text-[30px] mt-5" style="font-family: 'Bebas Neue';">NIÑAS</p>
-                </div>
-            </div>
-        </div>
+<div class="container mx-auto p-10 mt-[10vh] mb-[10vh]">
+    <h1
+        class="mt-10 mb-32 md:mb-0 text-center text-[72px] md:text-[100px] xl:text-[115px] text-[#444444] pt-10 px-0 pb-36 md:p-20"
+        style="font-family: bebas_neueregular; font-weight:200"
+    >
+        CATEGORIAS
+    </h1>
+    <div
+        class="flex -mt-[25vh] flex-col md:flex-row items-center gap-0 md:gap-20"
+    >
+        <a href="/catalogo/damas" class="text-center px-20 pt-5 bg-[#ccffd2]">
+            <span
+                class="beb-regular text-[50px] md:text-[72px] text-[#444444] pb-5"
+                >DAMAS</span
+            >
+            <Image src={img1} alt="Imagen 1" class="-mb-[10vh] md:-mb-[25vh]" />
+        </a>
+        <a
+            href="/catalogo/ninas"
+            class="mt-[25vh] md:mt-[50vh] text-center px-20 pb-5 bg-[#ccffd2]"
+        >
+            <Image src={img2} alt="Imagen 1" class="-mt-[10vh] md:-mt-[25vh]" />
+            <span
+                class="beb-regular text-[50px] md:text-[72px] text-[#444444] pt-5"
+                >NIÑAS</span
+            >
+        </a>
     </div>
 </div>

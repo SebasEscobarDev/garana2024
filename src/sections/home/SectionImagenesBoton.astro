@@ -1,22 +1,62 @@
 ---
 import { Image } from "astro:assets";
 import imagen1 from "@/assets/images/HOME/dama/vestidos/dama-5.jpg";
-import imagen2 from "@/assets/images/HOME/dama/vestidos/dama-1.jpg"
-import imagen3 from "@/assets/images/HOME/dama/vestidos/dama-2.jpg"
-import imagen4 from "@/assets/images/HOME/dama/vestidos/dama-3.jpg"
+import imagen2 from "@/assets/images/HOME/dama/vestidos/dama-1.jpg";
+import imagen3 from "@/assets/images/HOME/dama/vestidos/dama-2.jpg";
+import imagen4 from "@/assets/images/HOME/dama/vestidos/dama-3.jpg";
+import Arrow from "@/assets/svgs/Arrow.astro";
 ---
 
-<div class="container mx-auto p-20 ">
-    <div class="w-full h-[100hv] h-[700px] p-20 flex flex-col items-center">
-        <h1 class="text-[80px]" style="font-family: 'Bebas Neue';font-weight:200;letter-spacing : 1px">CONOCE NUESTRO CATALOGO</h1>
-        <div class="flex gap-10 mb-8 w-full max-w-4xl justify-center pb-5 pt-5">
-            <Image src={imagen1} alt="Imagen 1" class="object-cover w-[250px] h-[350px] " />
-            <Image src={imagen2} alt="Imagen 2" class="object-cover w-[250px] h-[350px] " />
-            <Image src={imagen3} alt="Imagen 2" class="object-cover w-[250px] h-[350px] " />
-            <Image src={imagen4} alt="Imagen 4" class="object-cover w-[250px] h-[350px] " />
+<div class="container mx-auto py-10">
+    <div class="w-full py-20 flex flex-col items-center">
+        <h1
+            class="leading-[70px] beb-regular text-center text-[72px] md:text-[115px] text-[#444444] mb-10"
+        >
+            CONOCE NUESTRO CATALOGO
+        </h1>
+        <div
+            class="flex flex-col items-center md:flex-row gap-5 md:gap-10 mb-8 w-full justify-center pb-5 pt-5"
+        >
+            <span>
+                <Image
+                    class="w-full inline-block xl:max-w-[350px]"
+                    src={imagen1}
+                    alt="Imagen 1"
+                />
+            </span>
+            <span>
+                <Image
+                    class="w-full inline-block xl:max-w-[350px]"
+                    src={imagen2}
+                    alt="Imagen 2"
+                />
+            </span>
+            <span>
+                <Image
+                    class="w-full inline-block xl:max-w-[350px]"
+                    src={imagen3}
+                    alt="Imagen 2"
+                />
+            </span>
+            <span>
+                <Image
+                    class="w-full inline-block xl:max-w-[350px]"
+                    src={imagen4}
+                    alt="Imagen 4"
+                />
+            </span>
         </div>
-        <button class="text-green-500 border border-green-500 py-3 px-10 rounded-[5px] hover:bg-green-500 hover:text-white transition-colors" style="font-family: 'Open Sans'">
-            VER CATALOGO
+        <button
+            class="flex items-center btn-catalogo text-[#3cab49] border border-[#3cab49] py-3 px-10 rounded-[5px] hover:bg-[#3cab49] hover:text-white transition-colors text-[25px] md:text-[40px] gap-2"
+            style="font-family: 'Open Sans'"
+        >
+            <span>VER CATALOGO</span>
+            <span class="hidden md:flex">
+                <Arrow width="60px" height="60px" color="#3cab49" />
+            </span>
+            <span class="flex md:hidden">
+                <Arrow width="30px" height="30px" color="#3cab49" />
+            </span>
         </button>
     </div>
 </div>

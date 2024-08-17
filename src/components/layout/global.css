@@ -1,0 +1,77 @@
+.animation,
+.btn-insta:after,
+.hover-insta {
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.menu-web>li:first-of-type>a::before {
+    content: '';
+    width: 2px;
+    height: 30px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+/* 
+bebas_neueregular
+bebas_neuelight
+bebas_neuebold
+bebas_neuethin */
+
+.beb-regular {
+    font-family: 'bebas_neueregular';
+}
+
+.beb-light {
+    font-family: 'bebas_neuelight';
+}
+
+.beb-bold {
+    font-family: 'bebas_neuebold';
+}
+
+.beb-thin {
+    font-family: 'bebas_neuethin';
+}
+
+
+.btn-catalogo:hover .arrow-svg path {
+    stroke: #fff;
+}
+
+.btn-nosotros:hover .arrow-svg path {
+    stroke: #000;
+}
+
+.btn-insta:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 5px;
+    opacity: 0;
+    border: 2px solid transparent;
+}
+
+.btn-insta:hover:after {
+    opacity: 1;
+    border: 2px solid white;
+}
+
+.hover-insta {
+    opacity: 0;
+}
+
+.btn-insta:hover .hover-insta {
+    opacity: 1;
+}

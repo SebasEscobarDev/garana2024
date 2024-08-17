@@ -4,14 +4,20 @@ import { Image } from "astro:assets";
 import MenuItems from "./MenuItems.astro";
 ---
 
-<div class="menu-principal fixed top-0 w-full z-50 flex-row" style="background-color: rgba(32, 112, 53, 0.8);">
+<div
+    class="menu-principal fixed top-0 w-full z-50 flex-row"
+    style="background-color: rgba(32, 112, 53, 0.8);"
+>
     <div class="flex items-center p-4 justify-between">
-        <div class="logo ml-10"> 
+        <a href="/" class="logo ml-10">
             <Image src={srcLogo} width={200} alt="Logo" />
-        </div>
-        <MenuItems clase="hidden md:flex" />
+        </a>
+        <MenuItems clase="hidden md:flex menu-web" />
     </div>
-    <div class="flex md:hidden w-full" style="background-color: rgb(32, 112, 53);">
-        <MenuItems clase="flex md:hidden" />
+    <div
+        class="flex md:hidden w-full"
+        style="background-color: rgb(32, 112, 53);"
+    >
+        <MenuItems clase="hidden" />
     </div>
 </div>

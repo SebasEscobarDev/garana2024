@@ -1,9 +1,29 @@
 ---
-const { titulo, image } = Astro.props;
+const { titulo, subtitulo, image } = Astro.props;
 ---
 
-<div class="w-full flex items-center h-[500px] bg-cover pt-[118px] " style={`background-image:url(${image.src}); background-size:cover;`}>
-    <h1 class="text-white text-[150px] md:text-[150px] xl:text-[200px] ml-[100px] " style="font-family: 'Bebas Neue'; font-weight:200">
-        {titulo}
-    </h1>
+<div
+    class="w-full flex items-center h-[500px] bg-cover pt-[118px]"
+    style={`background-image:url(${image.src}); background-size:cover;`}
+>
+    <span class="relative inline-block">
+        {
+            subtitulo && (
+                <span class="absolute -top-[2vh]">
+                    <h2
+                        class="text-white text-[30px] md:text-[50px] xl:text-[75px] ml-[100px] "
+                        style="font-family: 'Bebas Neue'; font-weight:200"
+                    >
+                        {subtitulo}
+                    </h2>
+                </span>
+            )
+        }
+        <h1
+            class="text-white text-[150px] md:text-[150px] xl:text-[200px] ml-[100px]"
+            style="font-family: 'Bebas Neue'; font-weight:200"
+        >
+            {titulo}
+        </h1>
+    </span>
 </div>

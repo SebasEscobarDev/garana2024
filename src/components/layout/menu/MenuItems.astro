@@ -2,8 +2,21 @@
 const { clase } = Astro.props;
 ---
 
-<ul class={`${clase} text-white flex-col  p-5 md:flex-row w-full md:w-auto  text-[30px] mr-[80px]`} >
-    <li class="flex" ><a class="text-center w-full  " style="font-family: 'Bebas neue';font-weight:200; letter-spacing : 1.1px" href="/">NOSOTROS</a></li>
-    <li class="flex mx-2 mr-[20px] ml-[20px]">|</li>
-    <li class="flex"><a class="text-center w-full " style="font-family: 'Bebas neue'; font-weight:200;letter-spacing : 1.1px" href="/acerca-de">PRODUCTOS</a></li>
+<ul
+    class={`${clase} text-white flex-col  p-5 md:flex-row w-full md:w-auto mr-[80px]`}
+>
+    <li class="flex">
+        <a
+            class="text-center relative inline-block w-full text-[36px] pr-10 mr-10"
+            style="font-family: bebas_neueregular; letter-spacing : 1.1px;"
+            href="/">NOSOTROS</a
+        >
+    </li>
+    <li class="flex">
+        <a
+            class="text-center w-full text-[36px]"
+            style="font-family: bebas_neueregular;letter-spacing : 1.1px;"
+            href="/acerca-de">PRODUCTOS</a
+        >
+    </li>
 </ul>
