@@ -1,6 +1,11 @@
 .animation,
 .btn-insta:after,
-.hover-insta {
+.hover-insta,
+.button-navigator,
+.button-navigator span,
+.button-navigator::after,
+.button-navigator::before,
+.menu-top {
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -ms-transition-duration: 0.3s;
@@ -8,7 +13,82 @@
     transition-duration: 0.3s;
 }
 
-.menu-web>li:first-of-type>a::before {
+.menu-top {
+    overflow: hidden;
+    padding: 0;
+    opacity: 0;
+    height: 0;
+}
+
+.menu-top.active {
+    opacity: 1;
+    height: 220px;
+}
+
+.button-navigator {
+    padding-top: 20px;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    position: relative;
+    float: right;
+    background: transparent;
+    width: 30px;
+    height: 23px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.button-navigator span,
+.button-navigator::after,
+.button-navigator::before {
+    transform: rotate(0deg);
+    content: ' ';
+    width: 30px;
+    height: 2px;
+    background: white;
+    border-radius: 21px;
+    display: inline-block;
+    vertical-align: top;
+    left: 0px;
+}
+
+.button-navigator span {
+    top: 10px;
+    position: relative;
+    opacity: 1;
+}
+
+.button-navigator.active span {
+    top: 0px;
+    opacity: 0;
+}
+
+.button-navigator::before {
+    top: 0px;
+    position: absolute;
+}
+
+.button-navigator::after {
+    bottom: 0px;
+    position: absolute;
+}
+
+.button-navigator.active::before {
+    top: 10px !important;
+    transform: rotate(45deg) !important;
+}
+
+.button-navigator.active::after {
+    bottom: 11px !important;
+    transform: rotate(-45deg) !important;
+}
+
+.menu-web>li {
+    position: relative;
+}
+
+.menu-web>li:not(:last-of-type)>a::before {
     content: '';
     width: 2px;
     height: 30px;

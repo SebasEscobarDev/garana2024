@@ -6,10 +6,10 @@ const { titulo, subtitulo, image } = Astro.props;
     class="w-full flex items-center h-[500px] bg-cover pt-[118px]"
     style={`background-image:url(${image.src}); background-size:cover;`}
 >
-    <span class="relative inline-block">
+    <span class="w-full relative inline-block text-center md:text-left">
         {
             subtitulo && (
-                <span class="absolute -top-[2vh]">
+                <span class="absolute left-4 -top-[2vh]">
                     <h2
                         class="text-white text-[30px] md:text-[50px] xl:text-[75px] ml-[100px] "
                         style="font-family: 'Bebas Neue'; font-weight:200"
@@ -20,7 +20,7 @@ const { titulo, subtitulo, image } = Astro.props;
             )
         }
         <h1
-            class="text-white text-[150px] md:text-[150px] xl:text-[200px] ml-[100px]"
+            class="text-white text-[90px] md:text-[150px] xl:text-[200px] md:ml-[100px]"
             style="font-family: 'Bebas Neue'; font-weight:200"
         >
             {titulo}

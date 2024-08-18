@@ -2,22 +2,40 @@
 import srcLogo from "@/assets/images/logo.png";
 import { Image } from "astro:assets";
 import MenuItems from "./MenuItems.astro";
+const { language } = Astro.props;
 ---
 
 <div
-    class="menu-principal fixed top-0 w-full z-50 flex-row"
-    style="background-color: rgba(32, 112, 53, 0.8);"
+    class="menu-principal fixed top-0 w-full z-50 flex-row items-center"
+    style="background-color: rgba(32, 112, 53, 0.9);"
 >
     <div class="flex items-center p-4 justify-between">
         <a href="/" class="logo ml-10">
             <Image src={srcLogo} width={200} alt="Logo" />
         </a>
-        <MenuItems clase="hidden md:flex menu-web" />
+        <div class="flex items-center h-full">
+            <ul class="list-idiomas flex gap-4">
+                <li><a href="/es">ES</a></li>
+                <li><a href="/en">EN</a></li>
+            </ul>
+        </div>
+        <span class="relative md:hidden">
+            <button class="button-navigator">
+                <span></span>
+            </button>
+        </span>
+        <MenuItems language={language} clase="hidden md:flex menu-web" />
     </div>
-    <div
-        class="flex md:hidden w-full"
-        style="background-color: rgb(32, 112, 53);"
-    >
-        <MenuItems clase="hidden" />
+    <div class="flex md:hidden w-full">
+        <MenuItems language={language} clase="menu-top" />
     </div>
 </div>
+
+<script>
+    const button = document.querySelector(".button-navigator");
+    const menu = document.querySelector(".menu-top");
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        menu.classList.toggle("active");
+    });
+</script>

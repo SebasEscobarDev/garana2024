@@ -3,25 +3,33 @@ import { Image } from "astro:assets";
 import srcLogo from "@/assets/images/logo.png";
 ---
 
-<footer> 
-    <div class="flex flex-col md:flex-row items-center p-5 justify-between text-white" style="background-color: rgb(45, 139, 55); min-height:280px; font-family: 'Open Sans', sans-serif;">
+<footer>
+    <div
+        class="flex flex-col md:flex-row items-center p-5 justify-between text-white py-10 gap-5"
+        style="background-color: rgb(45, 139, 55); min-height:280px; font-family: 'Open Sans', sans-serif; text-[25px]"
+    >
         <div class="logo mb-4 md:mb-0 md:ml-10">
             <Image src={srcLogo} width={300} alt="Logo" />
         </div>
-        <div class="flex-1 flex flex-col items-center justify-center text-[14px] md:text-[16px]">
-            <a class="text-center w-full font-bold mb-2">Páginas</a>
-            <a class="text-center w-full">Inicio</a>
-            <a class="text-center w-full">Nosotros</a>
-            <a class="text-center w-full">Proveedores</a>
-            <a class="text-center w-full">Productos</a>
+        <div
+            class="flex-1 flex flex-col items-center justify-center text-[14px] md:text-[16px]"
+        >
+            <h3 class="text-center w-full font-bold mb-2">Páginas</h3>
+            <a href="/" class="text-center w-full">Inicio</a>
+            <a href="/nosotros" class="text-center w-full">Nosotros</a>
+            <a href="/catalogo" class="text-center w-full">Productos</a>
+            <a href="/catalogo/damas" class="text-center w-full">Damas</a>
+            <a href="/catalogo/ninas" class="text-center w-full">Niñas</a>
         </div>
-        <div class="flex-1 flex flex-col items-center justify-center text-[14px] md:text-[16px]">
+        <div
+            class="flex-1 flex flex-col items-center justify-center text-[14px] md:text-[16px]"
+        >
             <a class="text-center w-full font-bold mb-2">Dirección</a>
             <a>Riosucio-Caldas</a>
             <a>Cra 13 #6-105</a>
             <a class="text-center w-full font-bold mb-2">Celular</a>
             <a>+57 315 4049745</a>
         </div>
-    </div>    
+    </div>
     <div style="background-color: rgb(39, 111, 48); height:17px;"></div>
 </footer>

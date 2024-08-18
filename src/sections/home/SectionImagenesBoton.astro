@@ -10,7 +10,7 @@ import Arrow from "@/assets/svgs/Arrow.astro";
 <div class="container mx-auto py-10">
     <div class="w-full py-20 flex flex-col items-center">
         <h1
-            class="leading-[70px] beb-regular text-center text-[72px] md:text-[115px] text-[#444444] mb-10"
+            class="leading-[70px] md:leading-[115px] beb-regular text-center text-[72px] md:text-[115px] text-[#444444] mb-10"
         >
             CONOCE NUESTRO CATALOGO
         </h1>
@@ -46,7 +46,8 @@ import Arrow from "@/assets/svgs/Arrow.astro";
                 />
             </span>
         </div>
-        <button
+        <a
+            href="/catalogo"
             class="flex items-center btn-catalogo text-[#3cab49] border border-[#3cab49] py-3 px-10 rounded-[5px] hover:bg-[#3cab49] hover:text-white transition-colors text-[25px] md:text-[40px] gap-2"
             style="font-family: 'Open Sans'"
         >
@@ -57,6 +58,6 @@ import Arrow from "@/assets/svgs/Arrow.astro";
             <span class="flex md:hidden">
                 <Arrow width="30px" height="30px" color="#3cab49" />
             </span>
-        </button>
+        </a>
     </div>
 </div>

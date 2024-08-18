@@ -1,0 +1,18 @@
+---
+import Html from "@/components/layout/Html.astro";
+import SectionQuienesSomos from "@/sections/nosotros/SectionQuienesSomosNosotros.astro";
+import SectionBanner from "@/sections/nosotros/SectionBannerNosotros.astro";
+import SectionQueNosInspira from "@/sections/nosotros/SectionQueNosInspiraNosotros.astro";
+import SectionPropuestaValor from "@/sections/nosotros/SectionPropuestaValorNosotros.astro";
+import SectionNosotrosIconos from "@/sections/nosotros/SectionNosotrosIconos.astro";
+import SliderNosotros from "@/assets/images/nosotros/slider.jpg";
+import BreadsCrumb from "@/components/layout/bread_crumbs/breadsCrumb.astro";
+---
+
+<Html title="| Acerca de Nosotros" language="es">
+    <BreadsCrumb titulo="NOSOTROS" image={SliderNosotros} language="es" />
+    <SectionQuienesSomos language="es" />
+    <SectionQueNosInspira language="es" />
+    <SectionPropuestaValor language="es" />
+    <SectionNosotrosIconos language="es" />
+</Html>
