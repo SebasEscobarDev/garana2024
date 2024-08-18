@@ -1,6 +1,20 @@
 ---
 import { Image } from "astro:assets";
 import hoja from "@/assets/images/bg-resenia.webp";
+const { language } = Astro.props;
+
+
+const english = {
+    titulo :"¿WHO WE ARE?",
+    parrafo:"We are a Colombian manufacturing company created in 2006, an initiative of two enterprising women, industrial engineers, who in the need to look for a better future, joined their skills and knowledge to form the company that today is known by the brand name Garana Art, dedicated to the production and commercialization of swimwear, with a vision focused on social and environmental responsibility."
+};
+
+const espanol = {
+    titulo: "¿QUIENES SOMOS?",
+    parrafo:"Somos una empresa manufacturera colombiana creada en el año 2006, iniciativa de dos mujeres emprendedoras, ingenieras industriales, quienes en la necesidad de buscar un mejor futuro, unen habilidades y conocimientos para formar la sociedad que hoy se conoce con la marca Garana Art, dedicada a la elaboración y comercialización de trajes de baño, con una visión enfocada a la responsabilidad social y ambiental."
+};
+
+
 ---
 
 <div
@@ -18,23 +32,16 @@ import hoja from "@/assets/images/bg-resenia.webp";
                     <h1
                         class="beb-bold text-[90px] md:text-[150px] text-center leading-[0.9] inline-block"
                     >
-                        ¿QUIENES SOMOS?
+                    {language === "es" ? espanol.titulo : english.titulo}
                     </h1>
                 </div>
             </div>
             <div class="flex flex-1">
                 <p
-                    class="text-center md:text-left text-[22px] leading-[28px] md:leading-[42px] md:text-[36px] flex-1"
+                    class="text-center md:text-left text-[22px] leading-[28px] md:leading-[30px] xl:leading-[42px] md:text-[25px] xl:text-[40px] flex-1"
                     style="font-family: 'Open Sans';"
                 >
-                    Somos una empresa manufacturera colombiana creada en el año
-                    2006, iniciativa de dos mujeres emprendedoras ingenieras
-                    industriales quienes en la necesidad de buscar un mejor
-                    futuro, unen habilidades y conocimientos para formar la
-                    sociedad que hoy se conoce con la marca de garana art,
-                    dedicada a la elaboración y comercialización de trajes de
-                    baño, con una visión enfocada a la responsabilidad social y
-                    ambiental.
+                {language === "es" ? espanol.parrafo : english.parrafo}
                 </p>
             </div>
         </div>

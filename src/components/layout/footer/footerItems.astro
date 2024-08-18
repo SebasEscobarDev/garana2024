@@ -4,6 +4,20 @@ import { Image } from "astro:assets";
 import statistics from "@/assets/images/statistics-svgrepo-com.svg";
 import target from "@/assets/images/target-archer-svgrepo-com.svg";
 import lealtad from "@/assets/images/lealtad.svg";
+const { language } = Astro.props;
+
+
+const english = {
+    envios :"SHIPMENTS TO ALL COLOMBIA",
+    diseños :"DESIGNS ESPECIALLY FOR YOU",
+    calidad :"QUALITY AND COMFORT GUARANTEED"
+};
+
+const espanol = {
+    envios : "ENVIOS A TODA COLOMBIA",
+    diseños : "DISEÑOS ESPECIALMENTE PARA TI",
+    calidad :"CALIDAD Y COMODIDA GARANTIZADAS"
+};
 ---
 
 <div
@@ -13,8 +27,8 @@ import lealtad from "@/assets/images/lealtad.svg";
         <Image src={lealtad} width={50} alt="Logo" class="mb-2" />
         <li class="flex w-full">
             <a
-                class="text-center w-full beb-regular text-[28px] md:text-[40px] text-[#444444] uppercase"
-                >ENVIOS A TODA COLOMBIA</a
+                class="text-center w-full beb-regular text-[28px] md:text-[28px] xl:text-[40px] text-[#444444] uppercase"
+                > {language === "es" ? espanol.envios : english.envios}</a
             >
         </li>
     </div>
@@ -22,8 +36,8 @@ import lealtad from "@/assets/images/lealtad.svg";
         <Image src={target} width={50} alt="Logo" class="mb-2" />
         <li class="flex w-full">
             <a
-                class="text-center w-full beb-regular text-[28px] md:text-[40px] text-[#444444] uppercase"
-                >DISEÑOS ESPECIALMENTE PARA TI</a
+                class="text-center w-full beb-regular text-[28px] md:text-[28px] xl:text-[40px] text-[#444444] uppercase"
+                > {language === "es" ? espanol.diseños : english.diseños}</a
             >
         </li>
     </div>
@@ -31,8 +45,8 @@ import lealtad from "@/assets/images/lealtad.svg";
         <Image src={statistics} width={50} alt="Logo" class="mb-2" />
         <li class="flex w-full">
             <a
-                class="text-center w-full beb-regular text-[28px] md:text-[40px] text-[#444444] uppercase"
-                >CALIDAD Y COMODIDAD GARANTIZADAS</a
+                class="text-center w-full beb-regular text-[28px] md:text-[28px] xl:text-[40px] text-[#444444] uppercase"
+                >C {language === "es" ? espanol.calidad : english.calidad}</a
             >
         </li>
     </div>

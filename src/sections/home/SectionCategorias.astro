@@ -2,6 +2,20 @@
 import img1 from "@/assets/images/HOME/categorias/damas.jpg";
 import img2 from "@/assets/images/HOME/categorias/ninas.jpg";
 import { Image } from "astro:assets";
+const { language } = Astro.props;
+ 
+const english = {
+    categorias : "CATEGORIES",
+    damas: "Ladies",
+    ninas: "Girls",
+};
+
+const espanol = {
+    categorias : "CATEGORIAS",
+    damas: "Damas",
+    ninas: "Niñas",
+
+};
 ---
 
 <div class="container mx-auto p-10 mt-[10vh] mb-[10vh]">
@@ -9,7 +23,7 @@ import { Image } from "astro:assets";
         class="mt-10 mb-32 md:mb-0 text-center text-[72px] md:text-[100px] xl:text-[115px] text-[#444444] pt-10 px-0 pb-36 md:p-20"
         style="font-family: bebas_neueregular; font-weight:200"
     >
-        CATEGORIAS
+    {language === "es" ? espanol.categorias : english.categorias}
     </h1>
     <div
         class="flex -mt-[25vh] flex-col md:flex-row items-center gap-0 md:gap-20"
@@ -20,7 +34,7 @@ import { Image } from "astro:assets";
         >
             <span
                 class="beb-regular text-[50px] md:text-[72px] text-[#444444] pb-5"
-                >DAMAS</span
+                >{language === "es" ? espanol.damas : english.damas}</span
             >
             <Image src={img1} alt="Imagen 1" class="-mb-[10vh] md:-mb-[25vh]" />
         </a>
@@ -31,7 +45,7 @@ import { Image } from "astro:assets";
             <Image src={img2} alt="Imagen 1" class="-mt-[10vh] md:-mt-[25vh]" />
             <span
                 class="beb-regular text-[50px] md:text-[72px] text-[#444444] pt-5"
-                >NIÑAS</span
+                >{language === "es" ? espanol.ninas : english.ninas}</span
             >
         </a>
     </div>

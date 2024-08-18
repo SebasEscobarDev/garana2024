@@ -1,6 +1,19 @@
 ---
 import { Image } from "astro:assets";
 import hoja from "@/assets/images/nosotros/bg-section-3.jpg";
+
+const { language } = Astro.props;
+
+
+const english = {
+    titulo :"¿THAT INSPIRES US?",
+    parrafo:"Our brand, Garana Art, is inspired by the beauty of women, enhancing their natural grace with the aim of achieving harmony in their bodies. From an organizational perspective, we are committed to providing the well-being that our employees and their families need, contributing by cultivating values of honesty, respect, responsibility, love, and loyalty."
+};
+
+const espanol = {
+    titulo: "¿QUE NOS INSPIRA?",
+    parrafo:"Nuestra marca Garana Art está inspirada en la belleza de la mujer, en su realce natural, con la finalidad de lograr la armonía de su cuerpo. Desde la perspectiva organizacional, nos inspiramos en brindar el bienestar que nuestros colaboradores y sus familias necesitan, aportando al cultivar valores de honestidad, respeto, responsabilidad, amor y lealtad."
+};
 ---
 
 <div
@@ -13,18 +26,13 @@ import hoja from "@/assets/images/nosotros/bg-section-3.jpg";
         <h1
             class="beb-bold text-[90px] md:text-[150px] leading-[0.9] text-white mb-8 text-grey"
         >
-            ¿QUE NOS INSPIRA?
+        {language === "es" ? espanol.titulo : english.titulo}
         </h1>
         <p
             class="text-[22px] md:text-[36px] leading-[32px] md:leading-[42px] text-white max-w-4xl text-center"
             style="font-family: 'Open Sans';"
         >
-            Nuestra marca garana art, esta inspirada en la belleza de la mujer,
-            en su realce natural, con la finalidad de lograr la armonia de su
-            cuerpo. Desde la perspectiva organizacional, nos inspiramos en
-            brindar el bienestar que nuestros colaboradores y sus familias
-            necesitan, aportando al cultivar valores de honestidad ,respeto,
-            responsabilidad, amor y lealtad.
+        {language === "es" ? espanol.parrafo : english.parrafo}
         </p>
     </div>
 </div>

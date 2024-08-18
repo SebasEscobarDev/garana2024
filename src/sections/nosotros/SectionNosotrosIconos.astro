@@ -3,51 +3,77 @@ import { Image } from "astro:assets";
 import diseno from "@/assets/images/nosotros/sketch.png";
 import factory from "@/assets/images/nosotros/factory-machine.png";
 import tech from "@/assets/images/nosotros/technology.png";
-//crea un array con la estructura image, titulo, descripcion
-const items = [
-    {
-        image: diseno,
-        title: "DISEÑO",
-        description:
-            "Tenemos un equipo que explora las tendencias del mercado, diseñando trajes de baño con estilo y a la moda. También diseñamos y estampamos nuestras propias telas como complemento para lograr que tu outfit sea sensacional.",
-    },
-    {
-        image: factory,
-        title: "CONFECCION",
-        description:
-            "Nuestro personal altamente preparado, se capacita continuamente para obtener el mejor resultado en las prendas que usas. Nuestra capacidad de producción es de 10 mil prendas mensuales, para garantizar que tienes lo que necesitas y cuando lo necesitas.",
-    },
-    {
-        image: tech,
-        title: "COMERCIALIZACION",
-        description:
-            "Nos enfocamos en la distribución mayorista de trajes de baño, tanto a nivel nacional como internacional. Procuramos la satisfacción de nuestros clientes mayoristas y la grata experiencia de nuestro cliente final al usar la marca garana art.",
-    },
-];
+const { language } = Astro.props;
+
+const english = {
+    items: [
+        {
+            image: diseno,
+            title: "DESIGN",
+            description:
+                "We have a team that explores market trends, designing stylish and fashionable swimwear. We also design and print our own fabrics as a complement to make your outfit sensational.",
+        },
+        {
+            image: factory,
+            title: "CONFECTION",
+            description:
+                "Our highly trained staff continuously undergoes training to achieve the best results in the garments you wear. Our production capacity is 10,000 garments per month, ensuring that you have what you need, when you need it.",
+        },
+        {
+            image: tech,
+            title: "MARKETING",
+            description:
+                "We focus on the wholesale distribution of swimwear, both nationally and internationally. We strive for the satisfaction of our wholesale clients and the pleasant experience of our end customers when they wear the Garana Art brand.",
+        },
+    ],
+};
+
+const espanol = {
+    items: [
+        {
+            image: diseno,
+            title: "DISEÑO",
+            description:
+                "Tenemos un equipo que explora las tendencias del mercado, diseñando trajes de baño con estilo y a la moda. También diseñamos y estampamos nuestras propias telas como complemento para lograr que tu outfit sea sensacional.",
+        },
+        {
+            image: factory,
+            title: "CONFECCION",
+            description:
+                "Nuestro personal altamente preparado, se capacita continuamente para obtener el mejor resultado en las prendas que usas. Nuestra capacidad de producción es de 10 mil prendas mensuales, para garantizar que tienes lo que necesitas y cuando lo necesitas.",
+        },
+        {
+            image: tech,
+            title: "COMERCIALIZACION",
+            description:
+                "Nos enfocamos en la distribución mayorista de trajes de baño, tanto a nivel nacional como internacional. Procuramos la satisfacción de nuestros clientes mayoristas y la grata experiencia de nuestro cliente final al usar la marca garana art.",
+        },
+    ],
+};
+
+const content = language === "es" ? espanol : english;
+
 ---
 
 <div
     class="relative container mx-auto w-full py-40 md:h-[100vh] flex items-center justify-center"
-    style="background-color: rgb(249, 252, 249);"
 >
     <div class="flex flex-col md:flex-row gap-20 md:gap-10 px-5 md:px-0">
-        {
-            items.map((item) => (
-                <div class="flex flex-col items-center">
-                    <div class="flex w-full items-center mb-4">
-                        <Image src={item.image} alt="icono" />
-                        <h1 class="ml-4 text-[50px] beb-regular">
-                            {item.title}
-                        </h1>
-                    </div>
-                    <p
-                        class="text-[22px] md:text-[26px] leading-[30px] md:leading-[38px] mt-4 text-left"
-                        style="font-family: 'Open Sans';"
-                    >
-                        {item.description}
-                    </p>
+        {content.items.map((item) => (
+            <div class="flex flex-col items-center">
+                <div class="flex w-full items-center mb-4">
+                    <Image src={item.image} alt="icono" />
+                    <h1 class="ml-4 text-[50px] beb-regular break-all">
+                        {item.title}
+                    </h1>
                 </div>
-            ))
-        }
+                <p
+                    class="text-[22px] md:text-[22px] md:leading-[28px] xl:text-[26px] leading-[30px] xl:leading-[38px] mt-4 text-left"
+                    style="font-family: 'Open Sans';"
+                >
+                    {item.description}
+                </p>
+            </div>
+        ))}
     </div>
 </div>

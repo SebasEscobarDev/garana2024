@@ -1,6 +1,17 @@
 ---
 import { Image } from "astro:assets";
 import hoja from "@/assets/images/nosotros/bg-section-3.jpg";
+const { language } = Astro.props;
+
+const english = {
+    titulo :"VALUE PROPOSAL",
+    parrafo:"We are a Colombian manufacturing company created in 2006, an initiative of two enterprising women, industrial engineers, who in the need to look for a better future, joined their skills and knowledge to form the company that today is known by the brand name Garana Art, dedicated to the production and commercialization of swimwear, with a vision focused on social and environmental responsibility."
+};
+
+const espanol = {
+    titulo: "PROPUESTA DE VALOR",
+    parrafo:"Somos una empresa manufacturera colombiana creada en el año 2006, iniciativa de dos mujeres emprendedoras, ingenieras industriales, quienes en la necesidad de buscar un mejor futuro, unen habilidades y conocimientos para formar la sociedad que hoy se conoce con la marca Garana Art, dedicada a la elaboración y comercialización de trajes de baño, con una visión enfocada a la responsabilidad social y ambiental."
+};
 ---
 
 <div
@@ -14,18 +25,13 @@ import hoja from "@/assets/images/nosotros/bg-section-3.jpg";
             class="text-[90px] leading-[0.9] md:text-[150px] text-white text-grey pb-10"
             style="font-family: 'Bebas Neue'; font-weight:200;"
         >
-            PROPUESTA DE VALOR
+        {language === "es" ? espanol.titulo : english.titulo}
         </h1>
         <p
             class="text-[22px] md:text-[36px] text-white max-w-5xl leading-[32px] md:leading-[42px]"
             style="font-family: 'Open Sans';"
         >
-            Nuestra marca garana art, está inspirada en la belleza de la mujer,
-            en su realce natural, con la finalidad de lograr la armonía de su
-            cuerpo. Desde la perspectiva organizacional, nos inspiramos en
-            brindar el bienestar que nuestros colaboradores y sus familias
-            necesitan, aportanto a cultivar valores de honestidad, respeto,
-            responsabilidad, amor y lealtad.
+        {language === "es" ? espanol.parrafo : english.parrafo}
         </p>
     </div>
 </div>
