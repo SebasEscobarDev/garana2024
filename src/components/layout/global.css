@@ -5,7 +5,9 @@
 .button-navigator span,
 .button-navigator::after,
 .button-navigator::before,
-.menu-top {
+.menu-top,
+.list-idiomas li.absolute,
+.menu-component {
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -ms-transition-duration: 0.3s;
@@ -18,11 +20,11 @@
     padding: 0;
     opacity: 0;
     height: 0;
-}
 
-.menu-top.active {
-    opacity: 1;
-    height: 220px;
+    &.active {
+        opacity: 1;
+        height: 220px;
+    }
 }
 
 .button-navigator {
@@ -88,16 +90,6 @@
     position: relative;
 }
 
-.menu-web>li:not(:last-of-type)>a::before {
-    content: '';
-    width: 2px;
-    height: 30px;
-    background: white;
-    position: absolute;
-    right: 0;
-    top: 12px;
-}
-
 /* 
 bebas_neueregular
 bebas_neuelight
@@ -154,4 +146,43 @@ bebas_neuethin */
 
 .btn-insta:hover .hover-insta {
     opacity: 1;
+}
+
+.list-idiomas {
+
+    & li.absolute {
+        opacity: 0;
+        bottom: 0px;
+    }
+
+    &:hover li.absolute {
+        opacity: 1;
+        bottom: -65px;
+    }
+
+    & a {
+        cursor: pointer;
+    }
+}
+
+/* escribe un after que empiece en 0px y en la mitad del contenedor y al hacer hover en el ul, el after aumenta su tamanio a 100% y alto 100%, tambien la opacidad y se desplace hacia left 0 y top 0  */
+.menu-component a::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    border-radius: 100px;
+    transition: all 0.3s;
+}
+
+.menu-component a:hover::after {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    top: 0%;
+    left: 0%;
 }

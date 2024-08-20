@@ -2,6 +2,7 @@
 const { clase, language } = Astro.props;
 
 const english = {
+    inicio: "HOME",
     nosotros: "ABOUT US",
     productos: "PRODUCTS",
     damas: "LADIES",
@@ -9,6 +10,7 @@ const english = {
 };
 
 const espanol = {
+    inicio: "INICIO",
     nosotros: "NOSOTROS",
     productos: "PRODUCTOS",
     damas: "DAMAS",
@@ -17,35 +19,43 @@ const espanol = {
 ---
 
 <ul
-    class={`${clase} text-white flex-col  p-5 md:flex-row w-full md:w-auto md:mr-[80px]`}
+    class={`${clase} menu-component text-white flex-col p-5 md:flex-row w-full md:w-auto md:mr-[80px] gap-4 md:gap-0`}
 >
-    <li class="flex">
+    <li class="flex md:h-8 items-center">
         <a
-            class="text-center relative inline-block w-full text-[36px] pr-0 md:pr-10 mr-0 md:mr-10"
+            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
+            style="font-family: bebas_neueregular; letter-spacing : 1.1px;"
+            href={`/${language}`}
+            >{language === "es" ? espanol.inicio : english.inicio}</a
+        >
+    </li>
+    <li class="flex md:h-8 items-center">
+        <a
+            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
             style="font-family: bebas_neueregular; letter-spacing : 1.1px;"
             href={`/${language}/nosotros`}
             >{language === "es" ? espanol.nosotros : english.nosotros}</a
         >
     </li>
-    <li class="flex">
+    <li class="flex md:h-8 items-center">
         <a
-            class="text-center relative inline-block w-full text-[36px] pr-0 md:pr-10 mr-0 md:mr-10"
+            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
             style="font-family: bebas_neueregular;letter-spacing : 1.1px;"
             href={`/${language}/catalogo`}
             >{language === "es" ? espanol.productos : english.productos}</a
         >
     </li>
-    <li class="flex">
+    <li class="flex md:h-8 items-center">
         <a
-            class="text-center relative inline-block w-full text-[36px] pr-0 md:pr-10 mr-0 md:mr-10"
+            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
             style="font-family: bebas_neueregular;letter-spacing : 1.1px;"
             href={`/${language}/catalogo/damas`}
             >{language === "es" ? espanol.damas : english.damas}</a
         >
     </li>
-    <li class="flex">
+    <li class="flex md:h-8 items-center">
         <a
-            class="text-center w-full text-[36px]"
+            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
             style="font-family: bebas_neueregular;letter-spacing : 1.1px;"
             href={`/${language}/catalogo/ninas`}
             >{language === "es" ? espanol.ninas : english.ninas}</a

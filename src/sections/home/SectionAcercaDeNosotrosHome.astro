@@ -4,55 +4,68 @@ import Arrow from "@/assets/svgs/Arrow.astro";
 
 const { language } = Astro.props;
 
-
 const english = {
-    titulo :"¿WHO WE ARE?",
-    boton:"learn more ",
-    boton2:"about us",
-    parrafo :"We are a Colombian manufacturing company created in 2006, an initiative of two enterprising women, industrial engineers, who in the need to look for a better future, joined their skills and knowledge to start the company that today is known by the brand name Garana Art, dedicated to the development and commercialization of swimwear, with a vision focused on social and environmental responsibility."
+    titulo: "¿WHO WE ARE?",
+    boton: "Learn more ",
+    boton2: "about us",
+    parrafo:
+        "We are a Colombian manufacturing company created in 2006, an initiative of two enterprising women, industrial engineers, who in the need to look for a better future, joined their skills and knowledge to start the company that today is known by the brand name Garana Art, dedicated to the development and commercialization of swimwear, with a vision focused on social and environmental responsibility.",
 };
 
 const espanol = {
     titulo: "¿QUIENES SOMOS?",
-    boton:"Conoce mas",
-    boton2:"de nosotros",
-    parrafo :"Somos una empresa manufacturera colombiana creada en 2006, una iniciativa de dos mujeres emprendedoras, ingenieras industriales, quienes ante la necesidad de buscar un mejor futuro, unieron sus habilidades y conocimientos para iniciar la empresa que hoy es conocida bajo la marca Garana Art, dedicada al desarrollo y comercialización de trajes de baño, con una visión enfocada en la responsabilidad social y ambiental."
+    boton: "Conoce mas ",
+    boton2: "de nosotros",
+    parrafo:
+        "Somos una empresa manufacturera colombiana creada en 2006, una iniciativa de dos mujeres emprendedoras, ingenieras industriales, quienes ante la necesidad de buscar un mejor futuro, unieron sus habilidades y conocimientos para iniciar la empresa que hoy es conocida bajo la marca Garana Art, dedicada al desarrollo y comercialización de trajes de baño, con una visión enfocada en la responsabilidad social y ambiental.",
 };
 ---
 
 <div
-    class="flex items-center justify-center w-full  bg-cover"
+    class="flex items-center justify-center w-full bg-cover"
     style={`background-image: url(${hoja.src})`}
 >
     <div
-        class="flex py-20  items-center justify-center w-full h-full bg-black bg-opacity-40 hover:bg-opacity-0.9 transition-opacity"
+        class="flex py-20 items-center justify-center w-full h-full bg-black bg-opacity-40 hover:bg-opacity-0.9 transition-opacity"
     >
         <div class="container px-[8vw]">
             <div
                 class="bg-black bg-opacity-50 border border-white border-opacity-50 rounded-[5px] pb-5 px-5 md:px-20"
             >
                 <div class="text-center text-white">
-                    <h2 class="beb-regular text-[50px] md:text-[80px] xl:text-[115px] pt-5">
+                    <h2
+                        class="beb-regular text-[50px] md:text-[80px] xl:text-[115px] pt-5"
+                    >
                         {language === "es" ? espanol.titulo : english.titulo}
                     </h2>
                     <p
                         class="text-[18px] leading-[22px] md:text-[26px] xl:text-[36px] md:leading-[42px]"
                         style="font-family: 'Open Sans';font-weight: 200;"
                     >
-                    {language === "es" ? espanol.parrafo : english.parrafo}
+                        {language === "es" ? espanol.parrafo : english.parrafo}
                     </p>
                     <div class="mt-10 flex justify-center md:mb-10">
-                        <button
+                        <a
+                            href={`/${language}/nosotros`}
                             class="btn-nosotros flex items-center bg-transparent border border-white border-opacity-50 rounded-[5px] py-2 px-2 md:px-8 text-[22px] md:text-[28px] xl:text-[40px] font-bold gap-2 text-white hover:bg-white hover:text-black transition-colors"
                             style="font-family: 'Open Sans';"
                         >
-                            <span class="flex gap-2 "
-                                >{language === "es" ? espanol.boton : english.boton} <span class="hidden md:flex"
-                                    >{language === "es" ? espanol.boton2 : english.boton2}</span
+                            <span class="flex gap-2"
+                                >{
+                                    language === "es"
+                                        ? espanol.boton
+                                        : english.boton
+                                }
+                                <span class="hidden md:flex"
+                                    >{
+                                        language === "es"
+                                            ? espanol.boton2
+                                            : english.boton2
+                                    }</span
                                 ></span
                             >
                             <Arrow width="40px" height="40px" color="white" />
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

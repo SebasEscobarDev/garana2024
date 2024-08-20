@@ -7,15 +7,14 @@ import imagen4 from "@/assets/images/HOME/dama/vestidos/dama-3.jpg";
 import Arrow from "@/assets/svgs/Arrow.astro";
 const { language } = Astro.props;
 
-
 const english = {
-    titulo :"SEE OUR CATALOG",
-    boton :"SEE CATALOG"
+    titulo: "SEE OUR CATALOG",
+    boton: "SEE CATALOG",
 };
 
 const espanol = {
     titulo: "CONOCE NUESTRO CATALOGO",
-    boton :"VER CATALOGO"
+    boton: "VER CATALOGO",
 };
 ---
 
@@ -24,7 +23,7 @@ const espanol = {
         <h1
             class="leading-[70px] md:leading-[115px] beb-regular text-center text-[72px] md:text-[115px] text-[#444444] mb-10"
         >
-        {language === "es" ? espanol.titulo : english.titulo}
+            {language === "es" ? espanol.titulo : english.titulo}
         </h1>
         <div
             class="flex flex-col items-center md:flex-row gap-5 md:gap-10 mb-8 w-full justify-center pb-5 pt-5"
@@ -59,7 +58,7 @@ const espanol = {
             </span>
         </div>
         <a
-            href="/catalogo"
+            href={`/${language}/catalogo`}
             class="flex items-center btn-catalogo text-[#3cab49] border border-[#3cab49] py-3 px-10 rounded-[5px] hover:bg-[#3cab49] hover:text-white transition-colors text-[25px] md:text-[40px] gap-2"
             style="font-family: 'Open Sans'"
         >

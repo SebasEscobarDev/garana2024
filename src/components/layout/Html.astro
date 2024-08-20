@@ -8,6 +8,7 @@ import FooterInstagram from "@/components/layout/footer/footer_images.astro";
 import icon from "@/assets/images/icon.png";
 
 const { title, language } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang={language}>
@@ -30,6 +31,7 @@ const { title, language } = Astro.props;
             href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
             rel="stylesheet"
         />
+        <ViewTransitions />
     </head>
     <body class="">
         <MenuPrincipal language={language} />

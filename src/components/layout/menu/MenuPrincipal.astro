@@ -2,6 +2,7 @@
 import srcLogo from "@/assets/images/logo.png";
 import { Image } from "astro:assets";
 import MenuItems from "./MenuItems.astro";
+import SelectLanguages from "./SelectLanguages.astro";
 const { language } = Astro.props;
 ---
 
@@ -10,14 +11,11 @@ const { language } = Astro.props;
     style="background-color: rgba(32, 112, 53, 0.9);"
 >
     <div class="flex items-center p-4 justify-between">
-        <a href="/" class="logo ml-10">
+        <a href={`/${language}/`} class="logo ml-10">
             <Image src={srcLogo} width={200} alt="Logo" />
         </a>
-        <div class="flex items-center h-full">
-            <ul class="list-idiomas flex gap-4">
-                <li><a href="/es">ES</a></li>
-                <li><a href="/en">EN</a></li>
-            </ul>
+        <div class="relative h-full">
+            <SelectLanguages is:inline language={language} />
         </div>
         <span class="relative md:hidden">
             <button class="button-navigator">
@@ -32,10 +30,12 @@ const { language } = Astro.props;
 </div>
 
 <script>
-    const button = document.querySelector(".button-navigator");
-    const menu = document.querySelector(".menu-top");
-    button.addEventListener("click", () => {
-        button.classList.toggle("active");
-        menu.classList.toggle("active");
+    document.addEventListener("astro:page-load", () => {
+        const button = document.querySelector(".button-navigator");
+        const menu = document.querySelector(".menu-top");
+        button.addEventListener("click", () => {
+            button.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
     });
 </script>

@@ -3,18 +3,17 @@ import img1 from "@/assets/images/HOME/categorias/damas.jpg";
 import img2 from "@/assets/images/HOME/categorias/ninas.jpg";
 import { Image } from "astro:assets";
 const { language } = Astro.props;
- 
+
 const english = {
-    categorias : "CATEGORIES",
+    categorias: "CATEGORIES",
     damas: "Ladies",
     ninas: "Girls",
 };
 
 const espanol = {
-    categorias : "CATEGORIAS",
+    categorias: "CATEGORIAS",
     damas: "Damas",
     ninas: "Niñas",
-
 };
 ---
 
@@ -23,13 +22,13 @@ const espanol = {
         class="mt-10 mb-32 md:mb-0 text-center text-[72px] md:text-[100px] xl:text-[115px] text-[#444444] pt-10 px-0 pb-36 md:p-20"
         style="font-family: bebas_neueregular; font-weight:200"
     >
-    {language === "es" ? espanol.categorias : english.categorias}
+        {language === "es" ? espanol.categorias : english.categorias}
     </h1>
     <div
         class="flex -mt-[25vh] flex-col md:flex-row items-center gap-0 md:gap-20"
     >
         <a
-            href="/catalogo/damas"
+            href={`/${language}/catalogo/damas`}
             class="btns-catalogo text-center px-20 pt-5 bg-[#ccffd2] hover:bg-[#91f89d]"
         >
             <span
@@ -39,7 +38,7 @@ const espanol = {
             <Image src={img1} alt="Imagen 1" class="-mb-[10vh] md:-mb-[25vh]" />
         </a>
         <a
-            href="/catalogo/ninas"
+            href={`/${language}/catalogo/ninas`}
             class="mt-[25vh] md:mt-[50vh] text-center px-20 pb-5 bg-[#ccffd2] hover:bg-[#91f89d]"
         >
             <Image src={img2} alt="Imagen 1" class="-mt-[10vh] md:-mt-[25vh]" />

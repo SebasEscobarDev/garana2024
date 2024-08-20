@@ -1,29 +1,29 @@
 ---
 import { Image } from "astro:assets";
-const {language } = Astro.props;
+const { language } = Astro.props;
 
 import srcLogo from "@/assets/images/logo.png";
 
 const english = {
-    inicio : "Home",
-    nosotros: "Abour us",
+    inicio: "Home",
+    nosotros: "About us",
     productos: "Products",
     damas: "Ladies",
     ninas: "Girls",
     direccion: "Address",
-    celular :"Cell phone ",
-    paginas:"Pages"
+    celular: "Cell phone ",
+    paginas: "Pages",
 };
 
 const espanol = {
-    inicio : "Inicio",
+    inicio: "Inicio",
     nosotros: "Nosotros",
     productos: "Productos",
     damas: "Damas",
     ninas: "Niñas",
     direccion: "Address",
-    celular :"Cell phone ",
-    paginas: "Paginas"
+    celular: "Cell phone ",
+    paginas: "Paginas",
 };
 ---
 
@@ -38,20 +38,36 @@ const espanol = {
         <div
             class="flex-1 flex flex-col items-center justify-center text-[14px] md:text-[16px]"
         >
-            <h3 class="text-center w-full font-bold mb-2">{language === "es" ? espanol.paginas : english.paginas}</h3>
-            <a href="/" class="text-center w-full">{language === "es" ? espanol.inicio : english.inicio}</a>
-            <a href="/nosotros" class="text-center w-full">{language === "es" ? espanol.nosotros : english.nosotros}</a>
-            <a href="/catalogo" class="text-center w-full">{language === "es" ? espanol.productos : english.productos}</a>
-            <a href="/catalogo/damas" class="text-center w-full">{language === "es" ? espanol.damas : english.damas}</a>
-            <a href="/catalogo/ninas" class="text-center w-full">{language === "es" ? espanol.ninas : english.ninas}</a>
+            <h3 class="text-center w-full font-bold mb-2">
+                {language === "es" ? espanol.paginas : english.paginas}
+            </h3>
+            <a href={`/${language}/`} class="text-center w-full"
+                >{language === "es" ? espanol.inicio : english.inicio}</a
+            >
+            <a href={`/${language}/nosotros`} class="text-center w-full"
+                >{language === "es" ? espanol.nosotros : english.nosotros}</a
+            >
+            <a href={`/${language}/catalogo`} class="text-center w-full"
+                >{language === "es" ? espanol.productos : english.productos}</a
+            >
+            <a href={`/${language}/catalogo/damas`} class="text-center w-full"
+                >{language === "es" ? espanol.damas : english.damas}</a
+            >
+            <a href={`/${language}/catalogo/ninas`} class="text-center w-full"
+                >{language === "es" ? espanol.ninas : english.ninas}</a
+            >
         </div>
         <div
             class="flex-1 flex flex-col items-center justify-center text-[14px] md:text-[16px]"
         >
-            <a class="text-center w-full font-bold mb-2">{language === "es" ? espanol.direccion : english.direccion}</a>
+            <a class="text-center w-full font-bold mb-2"
+                >{language === "es" ? espanol.direccion : english.direccion}</a
+            >
             <a>Riosucio-Caldas</a>
             <a>Cra 13 #6-105</a>
-            <a class="text-center w-full font-bold mb-2">{language === "es" ? espanol.celular : english.celular}</a>
+            <a class="text-center w-full font-bold mb-2"
+                >{language === "es" ? espanol.celular : english.celular}</a
+            >
             <a>+57 315 4049745</a>
         </div>
     </div>
