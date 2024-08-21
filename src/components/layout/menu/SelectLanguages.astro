@@ -1,5 +1,7 @@
 ---
 const { language } = Astro.props;
+const path = Astro.url.pathname;
+const newUrl = path.replace("/" + language, language === "es" ? "/en" : "/es");
 ---
 
 <ul class="list-idiomas relative z-10">
@@ -11,7 +13,7 @@ const { language } = Astro.props;
     </li>
     <li class="flex -z-10 left-0 -bottom-14 absolute">
         <a
-            href={language === "es" ? "/en" : "/es"}
+            href={newUrl}
             class="border border-[#666666] rounded-full pl-8 pr-8 py-2 beb-regular text-[26px] text-[#666666] bg-white"
             >{language === "es" ? "EN" : "ES"}</a
         >

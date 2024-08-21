@@ -1,16 +1,15 @@
 ---
 import { Image } from "astro:assets";
-import srcSlider from "@/assets/images/HOME/slider/bg-fondo.jpg";
+import srcSlider from "@/assets/images/HOME/slider/bg-home-2.jpg";
 import bk from "@/assets/images/HOME/slider/img.jpg";
 const { language } = Astro.props;
 
-
 const english = {
-    titulo :"WELCOME"
+    titulo: "WELCOME",
 };
 
 const espanol = {
-    titulo: "BIENVENIDOS"
+    titulo: "BIENVENIDOS",
 };
 ---
 
@@ -31,7 +30,7 @@ const espanol = {
                     class="text-[90px] md:text-[150px] xl:text-[200px] text-white"
                     style="font-family: 'Bebas Neue'; font-weight:300"
                 >
-                {language === "es" ? espanol.titulo : english.titulo}
+                    {language === "es" ? espanol.titulo : english.titulo}
                 </h1>
             </div>
             <div class="flex w-full justify-center md:justify-end">
