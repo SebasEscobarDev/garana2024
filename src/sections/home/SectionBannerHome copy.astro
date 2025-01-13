@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import srcSlider from "@/assets/images/HOME/slider/bg-home-2.jpg";
+import bk from "@/assets/images/HOME/slider/img.jpg";
+const { language } = Astro.props;
+
+const english = {
+    titulo: "WELCOME",
+};
+
+const espanol = {
+    titulo: "BIENVENIDOS",
+};
+---
+
+<div class="flex h-[100vh]">
+    <div
+        class="flex flex-col md:flex-row h-[80vh] bg-cover items-center w-full border-b-[15px] border-[#2c8b37]"
+        style={`background-image:url(${srcSlider.src})`}
+    >
+        <div
+            class="flex -top-[15px] md:hidden absolute w-full bg-[rgba(0,0,0,0.3)] z-10 h-[80vh]"
+        >
+        </div>
+        <div
+            class="container z-20 mx-auto mt-20 md:mt-0 gap-20 md:gap-0 flex flex-col md:flex-row items-center"
+        >
+            <div class="w-full pt-[118px] text-center md:text-left">
+                <h1
+                    class="text-[90px] md:text-[150px] xl:text-[200px] text-white"
+                    style="font-family: 'Bebas Neue'; font-weight:300"
+                >
+                    {language === "es" ? espanol.titulo : english.titulo}
+                </h1>
+            </div>
+            <div class="flex w-full justify-center md:justify-end">
+                <Image
+                    class="max-w-[80vw] md:max-w-[40vw] xl:max-w-[30vw] -mb-[50vh] border-r-[15px] border-[#2c8b37]"
+                    src={bk}
+                    alt="Slider"
+                />
+            </div>
+        </div>
+    </div>
+</div>

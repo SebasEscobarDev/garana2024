@@ -6,7 +6,7 @@ const english = {
     nosotros: "ABOUT US",
     productos: "PRODUCTS",
     damas: "LADIES",
-    ninas: "GIRLS",
+    ninas: "CHILDREN'S",
 };
 
 const espanol = {
@@ -14,7 +14,7 @@ const espanol = {
     nosotros: "NOSOTROS",
     productos: "PRODUCTOS",
     damas: "DAMAS",
-    ninas: "NIÑAS",
+    ninas: "INFANTIL",
 };
 ---
 
@@ -23,41 +23,41 @@ const espanol = {
 >
     <li class="flex md:h-8 items-center">
         <a
-            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
-            style="font-family: bebas_neueregular; letter-spacing : 1.1px;"
+            class="wonderland text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
+            style="letter-spacing : 1.1px;"
             href={`/${language}`}
             >{language === "es" ? espanol.inicio : english.inicio}</a
         >
     </li>
     <li class="flex md:h-8 items-center">
         <a
-            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
-            style="font-family: bebas_neueregular; letter-spacing : 1.1px;"
+            class="wonderland text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
+            style="letter-spacing : 1.1px;"
             href={`/${language}/nosotros`}
             >{language === "es" ? espanol.nosotros : english.nosotros}</a
         >
     </li>
     <li class="flex md:h-8 items-center">
         <a
-            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
-            style="font-family: bebas_neueregular;letter-spacing : 1.1px;"
+            class="wonderland text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
+            style="letter-spacing : 1.1px;"
             href={`/${language}/catalogo`}
             >{language === "es" ? espanol.productos : english.productos}</a
         >
     </li>
     <li class="flex md:h-8 items-center">
         <a
-            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
-            style="font-family: bebas_neueregular;letter-spacing : 1.1px;"
+            class="wonderland text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
+            style="letter-spacing : 1.1px;"
             href={`/${language}/catalogo/damas`}
             >{language === "es" ? espanol.damas : english.damas}</a
         >
     </li>
     <li class="flex md:h-8 items-center">
         <a
-            class="text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
-            style="font-family: bebas_neueregular;letter-spacing : 1.1px;"
-            href={`/${language}/catalogo/ninas`}
+            class="wonderland text-center hover:text-[#444444] rounded-full relative inline-block w-full text-[36px] px-0 md:px-5 mx-0 md:mx-2"
+            style="letter-spacing : 1.1px;"
+            href={`/${language}/catalogo/infantil`}
             >{language === "es" ? espanol.ninas : english.ninas}</a
         >
     </li>

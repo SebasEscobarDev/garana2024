@@ -112,6 +112,15 @@ bebas_neuethin */
     font-family: 'bebas_neuethin';
 }
 
+.meditative {
+    font-family: 'meditative';
+}
+
+
+.wonderland {
+    font-family: 'wonderland';
+}
+
 
 .btn-catalogo:hover .arrow-svg path {
     stroke: #fff;

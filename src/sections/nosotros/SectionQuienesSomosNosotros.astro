@@ -1,47 +1,41 @@
 ---
 import { Image } from "astro:assets";
-import hoja from "@/assets/images/bg-resenia.webp";
+import hoja from "@/assets/images/nosotros/QUIENES-SOMOS.webp";
 const { language } = Astro.props;
 
-
 const english = {
-    titulo :"¿WHO WE ARE?",
-    parrafo:"We are a Colombian manufacturing company created in 2006, an initiative of two enterprising women, industrial engineers, who in the need to look for a better future, joined their skills and knowledge to form the company that today is known by the brand name Garana Art, dedicated to the production and commercialization of swimwear, with a vision focused on social and environmental responsibility."
+    titulo: "¿WHO WE ARE?",
+    parrafo:
+        "We are a Colombian manufacturing company created in 2006, an initiative of two enterprising women, industrial engineers, who in the need to look for a better future, joined their skills and knowledge to form the company that today is known by the brand name Garana Art, dedicated to the production and commercialization of swimwear, with a vision focused on social and environmental responsibility.",
 };
 
 const espanol = {
     titulo: "¿QUIENES SOMOS?",
-    parrafo:"Somos una empresa manufacturera colombiana creada en el año 2006, iniciativa de dos mujeres emprendedoras, ingenieras industriales, quienes en la necesidad de buscar un mejor futuro, unen habilidades y conocimientos para formar la sociedad que hoy se conoce con la marca Garana Art, dedicada a la elaboración y comercialización de trajes de baño, con una visión enfocada a la responsabilidad social y ambiental."
+    parrafo:
+        "Somos una empresa manufacturera colombiana creada en el año 2006, iniciativa de dos mujeres emprendedoras, ingenieras industriales, quienes en la necesidad de buscar un mejor futuro, unen habilidades y conocimientos para formar la sociedad que hoy se conoce con la marca Garana Art, dedicada a la elaboración y comercialización de trajes de baño, con una visión enfocada a la responsabilidad social y ambiental.",
 };
-
-
 ---
 
 <div
-    class="w-full py-20 md:py-0 md:h-[100vh] bg-cover flex items-center"
+    class="w-full py-20 min-h-[100vh] bg-cover flex items-center"
     style={`background-image:url(${hoja.src})`}
 >
     <div class="container mx-auto">
-        <div
-            class="flex flex-col md:flex-row items-center justify-center px-5 md:px-10"
-        >
-            <div class="flex-1 flex justify-end md:mr-20 mb-10">
-                <div
-                    class="bg-[rgb(204,255,210)] inline-block md:w-[500px] py-10"
-                >
+        <div class="flex flex-col items-center justify-center px-5 md:px-20">
+            <div class="flex justify-end md:mr-20 mb-10">
+                <div class="inline-block py-10">
                     <h1
-                        class="beb-bold text-[90px] md:text-[150px] text-center leading-[0.9] inline-block"
+                        class="meditative drop-shadow-md stroke-black stroke-2 text-white text-[70px] md:text-[100px] text-center leading-[0.9] inline-block"
                     >
-                    {language === "es" ? espanol.titulo : english.titulo}
+                        {language === "es" ? espanol.titulo : english.titulo}
                     </h1>
                 </div>
             </div>
-            <div class="flex flex-1">
+            <div class="flex">
                 <p
-                    class="text-center md:text-left text-[22px] leading-[28px] md:leading-[30px] xl:leading-[42px] md:text-[25px] xl:text-[40px] flex-1"
-                    style="font-family: 'Open Sans';"
+                    class="drop-shadow-md wonderland text-white stroke-black stroke-2 text-center text-[22px] leading-[28px] md:leading-[35px] xl:leading-[38px] md:text-[35px] xl:text-[35px] max-w-6xl"
                 >
-                {language === "es" ? espanol.parrafo : english.parrafo}
+                    {language === "es" ? espanol.parrafo : english.parrafo}
                 </p>
             </div>
         </div>

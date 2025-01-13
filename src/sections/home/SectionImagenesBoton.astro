@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import imagen1 from "@/assets/images/HOME/dama/vestidos/dama-5.jpg";
-import imagen2 from "@/assets/images/HOME/dama/vestidos/dama-1.jpg";
-import imagen3 from "@/assets/images/HOME/dama/vestidos/dama-2.jpg";
-import imagen4 from "@/assets/images/HOME/dama/vestidos/dama-3.jpg";
+import imagen1 from "@/assets/images/HOME/dama/vestidos/NUESTRO-CATALOGO-1.webp";
+import imagen2 from "@/assets/images/HOME/dama/vestidos/NUESTRO-CATALOGO-2.webp";
+import imagen3 from "@/assets/images/HOME/dama/vestidos/NUESTRO-CATALOGO-3.webp";
+import imagen4 from "@/assets/images/HOME/dama/vestidos/NUESTRO-CATALOGO-4.webp";
 import Arrow from "@/assets/svgs/Arrow.astro";
 const { language } = Astro.props;
 
@@ -18,10 +18,10 @@ const espanol = {
 };
 ---
 
-<div class="container mx-auto py-10">
-    <div class="w-full py-20 flex flex-col items-center">
+<div class="container mx-auto">
+    <div class="w-full min-h-[100vh] h-auto flex flex-col items-center py-10">
         <h1
-            class="leading-[70px] md:leading-[115px] beb-regular text-center text-[72px] md:text-[115px] text-[#444444] mb-10"
+            class="meditative text-[#005141] leading-[70px] md:leading-[115px] beb-regular text-center text-[72px] md:text-[115px] mb-10"
         >
             {language === "es" ? espanol.titulo : english.titulo}
         </h1>
@@ -59,15 +59,14 @@ const espanol = {
         </div>
         <a
             href={`/${language}/catalogo`}
-            class="flex items-center btn-catalogo text-[#3cab49] border border-[#3cab49] py-3 px-10 rounded-[5px] hover:bg-[#3cab49] hover:text-white transition-colors text-[25px] md:text-[40px] gap-2"
-            style="font-family: 'Open Sans'"
+            class="flex items-center btn-catalogo wonderland text-[#005141] border border-[#005141] py-3 px-10 rounded-[5px] hover:bg-[#005141] hover:text-white transition-colors text-[25px] md:text-[40px] gap-2"
         >
             <span>{language === "es" ? espanol.boton : english.boton}</span>
             <span class="hidden md:flex">
-                <Arrow width="60px" height="60px" color="#3cab49" />
+                <Arrow width="60px" height="60px" color="#005141" />
             </span>
             <span class="flex md:hidden">
-                <Arrow width="30px" height="30px" color="#3cab49" />
+                <Arrow width="30px" height="30px" color="#005141" />
             </span>
         </a>
     </div>

@@ -15,7 +15,7 @@ import vestido10 from "@/assets/images/catalogo-ninia/vestidos/ninia-10.jpg";
 import vestido11 from "@/assets/images/catalogo-ninia/vestidos/ninia-11.jpg";
 
 import BreadsCrumb from "@/components/layout/bread_crumbs/breadsCrumb.astro";
-import SliderCatalogo from "@/assets/images/catalogo-ninia/slider.jpg";
+import SliderCatalogo from "@/assets/images/catalogo-ninia/BANNER-CATALOGO-NINAS.webp";
 
 const vestidos = [
     vestido1,
@@ -32,12 +32,12 @@ const vestidos = [
 ];
 ---
 
-<Html title="Girls Catalog" language="en">
+<Html title="Catálogo Infantil" language="es">
     <BreadsCrumb
-        subtitulo="CATALOG"
-        titulo="GIRLS"
+        subtitulo="CATÁLOGO"
+        titulo="INFANTIL"
         image={SliderCatalogo}
-        language="en"
+        language="es"
     />
-    <Galeria title="Dresses" imagenes={vestidos} language="en" />
+    <Galeria title="vestidos" imagenes={vestidos} language="es" />
 </Html>

@@ -1,6 +1,6 @@
 ---
-import img1 from "@/assets/images/HOME/categorias/damas.jpg";
-import img2 from "@/assets/images/HOME/categorias/ninas.jpg";
+import img1 from "@/assets/images/HOME/categorias/CATEGORIAS-1.webp";
+import img2 from "@/assets/images/HOME/categorias/CATEGORIAS-2.webp";
 import { Image } from "astro:assets";
 const { language } = Astro.props;
 
@@ -19,33 +19,24 @@ const espanol = {
 
 <div class="container mx-auto p-10 mt-[10vh] mb-[10vh]">
     <h1
-        class="mt-10 mb-32 md:mb-0 text-center text-[72px] md:text-[100px] xl:text-[115px] text-[#444444] pt-10 px-0 pb-36 md:p-20"
-        style="font-family: bebas_neueregular; font-weight:200"
+        class="meditative mt-10 mb-32 md:mb-0 text-center text-[72px] md:text-[100px] xl:text-[115px] text-[#005141] pt-10 px-0 pb-36 md:p-20"
     >
         {language === "es" ? espanol.categorias : english.categorias}
     </h1>
     <div
-        class="flex -mt-[25vh] flex-col md:flex-row items-center gap-0 md:gap-20"
+        class="flex -mt-[25vh] flex-col md:flex-row justify-center items-center gap-0 md:gap-20"
     >
         <a
             href={`/${language}/catalogo/damas`}
-            class="btns-catalogo text-center px-20 pt-5 bg-[#ccffd2] hover:bg-[#91f89d]"
+            class="btns-catalogo text-center"
         >
-            <span
-                class="beb-regular text-[50px] md:text-[72px] text-[#444444] pb-5"
-                >{language === "es" ? espanol.damas : english.damas}</span
-            >
             <Image src={img1} alt="Imagen 1" class="-mb-[10vh] md:-mb-[25vh]" />
         </a>
         <a
-            href={`/${language}/catalogo/ninas`}
-            class="mt-[25vh] md:mt-[50vh] text-center px-20 pb-5 bg-[#ccffd2] hover:bg-[#91f89d]"
+            href={`/${language}/catalogo/infantil`}
+            class="mt-[25vh] md:mt-[50vh] text-center"
         >
             <Image src={img2} alt="Imagen 1" class="-mt-[10vh] md:-mt-[25vh]" />
-            <span
-                class="beb-regular text-[50px] md:text-[72px] text-[#444444] pt-5"
-                >{language === "es" ? espanol.ninas : english.ninas}</span
-            >
         </a>
     </div>
 </div>

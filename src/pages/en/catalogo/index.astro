@@ -2,21 +2,24 @@
 import Html from "@/components/layout/Html.astro";
 import SectionC from "@/sections/home/SectionCategorias.astro";
 import BreadsCrumb from "@/components/layout/bread_crumbs/breadsCrumb.astro";
-import SliderCatalogo from "@/assets/images/catalogo/landing-page-2.jpg";
+import SliderCatalogo from "@/assets/images/catalogo/BANNER-CATALOGO.webp";
 const { language } = Astro.props;
 
-
 const english = {
-    catalogo :"CATALOG"
+    catalogo: "CATALOG",
 };
 
 const espanol = {
-    catalogo: "CATALOGO"
+    catalogo: "CATALOGO",
 };
 ---
 
 <Html title="Catálogo" language="en">
-    <BreadsCrumb titulo={language === "es" ? espanol.catalogo : english.catalogo} image={SliderCatalogo} language="en" />
+    <BreadsCrumb
+        titulo={language === "es" ? espanol.catalogo : english.catalogo}
+        image={SliderCatalogo}
+        language="en"
+    />
     <div class="w-full -mb-[15vh]"></div>
     <SectionC language="en" />
     <div class="w-full h-32"></div>

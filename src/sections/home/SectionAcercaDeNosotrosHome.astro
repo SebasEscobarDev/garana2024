@@ -1,5 +1,5 @@
 ---
-import hoja from "@/assets/images/hoja.jpeg";
+import hoja from "@/assets/images/nosotros/QUIENES-SOMOS.webp";
 import Arrow from "@/assets/svgs/Arrow.astro";
 
 const { language } = Astro.props;
@@ -22,11 +22,11 @@ const espanol = {
 ---
 
 <div
-    class="flex items-center justify-center w-full bg-cover"
+    class="flex items-center justify-center w-full bg-cover min-h-[100vh]"
     style={`background-image: url(${hoja.src})`}
 >
     <div
-        class="flex py-20 items-center justify-center w-full h-full bg-black bg-opacity-40 hover:bg-opacity-0.9 transition-opacity"
+        class="flex py-20 items-center justify-center w-full min-h-[100vh] bg-black bg-opacity-40 hover:bg-opacity-0.9 transition-opacity"
     >
         <div class="container px-[8vw]">
             <div
@@ -34,21 +34,19 @@ const espanol = {
             >
                 <div class="text-center text-white">
                     <h2
-                        class="beb-regular text-[50px] md:text-[80px] xl:text-[115px] pt-5"
+                        class="meditative text-[50px] md:text-[80px] xl:text-[115px] pt-5"
                     >
                         {language === "es" ? espanol.titulo : english.titulo}
                     </h2>
                     <p
-                        class="text-[18px] leading-[22px] md:text-[26px] xl:text-[36px] md:leading-[42px]"
-                        style="font-family: 'Open Sans';font-weight: 200;"
+                        class="wonderland text-[18px] leading-[22px] md:text-[26px] xl:text-[36px] md:leading-[42px]"
                     >
                         {language === "es" ? espanol.parrafo : english.parrafo}
                     </p>
                     <div class="mt-10 flex justify-center md:mb-10">
                         <a
                             href={`/${language}/nosotros`}
-                            class="btn-nosotros flex items-center bg-transparent border border-white border-opacity-50 rounded-[5px] py-2 px-2 md:px-8 text-[22px] md:text-[28px] xl:text-[40px] font-bold gap-2 text-white hover:bg-white hover:text-black transition-colors"
-                            style="font-family: 'Open Sans';"
+                            class="btn-nosotros flex items-center bg-transparent border border-white border-opacity-50 rounded-[5px] py-2 px-2 md:px-8 text-[22px] md:text-[28px] xl:text-[40px] font-bold gap-2 text-white hover:bg-white hover:text-black transition-colors wonderland"
                         >
                             <span class="flex gap-2"
                                 >{
