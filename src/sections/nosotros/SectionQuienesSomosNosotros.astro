@@ -10,16 +10,20 @@ const english = {
 };
 
 const espanol = {
-    titulo: "¿QUIENES SOMOS?",
+    titulo: "¿QUIÉNES SOMOS?",
     parrafo:
         "Somos una empresa manufacturera colombiana creada en el año 2006, iniciativa de dos mujeres emprendedoras, ingenieras industriales, quienes en la necesidad de buscar un mejor futuro, unen habilidades y conocimientos para formar la sociedad que hoy se conoce con la marca Garana Art, dedicada a la elaboración y comercialización de trajes de baño, con una visión enfocada a la responsabilidad social y ambiental.",
 };
 ---
 
 <div
-    class="w-full py-20 min-h-[100vh] bg-cover flex items-center"
-    style={`background-image:url(${hoja.src})`}
+    class="w-full relative py-20 min-h-[100vh] bg-cover flex items-center"
+    style={`background-image:url(${hoja.src});background-color:`}
 >
+    <div
+        class="absolute w-full min-h-[100vh] bg-[rgba(0,0,0,0.2)] top-0 left-0"
+    >
+    </div>
     <div class="container mx-auto">
         <div class="flex flex-col items-center justify-center px-5 md:px-20">
             <div class="flex justify-end md:mr-20 mb-10">

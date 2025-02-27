@@ -17,9 +17,13 @@ const espanol = {
 ---
 
 <div
-    class="flex items-center justify-center w-full py-20 min-h-[100vh] bg-cover"
+    class="flex relative items-center justify-center w-full py-20 min-h-[100vh] bg-cover"
     style=`background-image: url(${hoja.src})`
 >
+    <div
+        class="absolute w-full min-h-[100vh] bg-[rgba(0,0,0,0.2)] top-0 left-0"
+    >
+    </div>
     <div
         class="flex flex-col items-center justify-center text-center px-5 md:px-10"
     >

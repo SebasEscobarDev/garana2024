@@ -11,16 +11,20 @@ const english = {
 };
 
 const espanol = {
-    titulo: "¿QUE NOS INSPIRA?",
+    titulo: "¿QUÉ NOS INSPIRA?",
     parrafo:
         "Nuestra marca Garana Art está inspirada en la belleza de la mujer, en su realce natural, con la finalidad de lograr la armonía de su cuerpo. Desde la perspectiva organizacional, nos inspiramos en brindar el bienestar que nuestros colaboradores y sus familias necesitan, aportando al cultivar valores de honestidad, respeto, responsabilidad, amor y lealtad.",
 };
 ---
 
 <div
-    class="w-full bg-cover min-h-[100vh] py-20 flex items-center justify-center"
+    class="w-full relative bg-cover min-h-[100vh] py-20 flex items-center justify-center"
     style={`background-image: url(${hoja.src})`}
 >
+    <div
+        class="absolute w-full min-h-[100vh] bg-[rgba(0,0,0,0.2)] top-0 left-0"
+    >
+    </div>
     <div
         class="flex flex-col items-center justify-center text-center px-5 md:px-10"
     >

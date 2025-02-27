@@ -1,20 +1,23 @@
 ---
 import img1 from "@/assets/images/HOME/categorias/CATEGORIAS-1.webp";
 import img2 from "@/assets/images/HOME/categorias/CATEGORIAS-2.webp";
+import img3 from "@/assets/images/HOME/categorias/CATEGORIES-1.webp";
+import img4 from "@/assets/images/HOME/categorias/CATEGORIES-2.webp";
 import { Image } from "astro:assets";
 const { language } = Astro.props;
 
-const english = {
-    categorias: "CATEGORIES",
-    damas: "Ladies",
-    ninas: "Girls",
+const espanol = {
+    categorias: "CATEGORÍAS",
+    images: [img1, img2],
 };
 
-const espanol = {
-    categorias: "CATEGORIAS",
-    damas: "Damas",
-    ninas: "Niñas",
+const english = {
+    categorias: "CATEGORIES",
+    images: [img3, img4],
 };
+
+const imgCategory1 = language === "es" ? espanol.images[0] : english.images[0];
+const imgCategory2 = language === "es" ? espanol.images[1] : english.images[1];
 ---
 
 <div class="container mx-auto p-10 mt-[10vh] mb-[10vh]">
@@ -30,13 +33,21 @@ const espanol = {
             href={`/${language}/catalogo/damas`}
             class="btns-catalogo text-center"
         >
-            <Image src={img1} alt="Imagen 1" class="-mb-[10vh] md:-mb-[25vh]" />
+            <Image
+                src={imgCategory1}
+                alt="Imagen 1"
+                class="-mb-[10vh] md:-mb-[25vh]"
+            />
         </a>
         <a
             href={`/${language}/catalogo/infantil`}
             class="mt-[25vh] md:mt-[50vh] text-center"
         >
-            <Image src={img2} alt="Imagen 1" class="-mt-[10vh] md:-mt-[25vh]" />
+            <Image
+                src={imgCategory2}
+                alt="Imagen 1"
+                class="-mt-[10vh] md:-mt-[25vh]"
+            />
         </a>
     </div>
 </div>

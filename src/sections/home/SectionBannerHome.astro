@@ -2,21 +2,26 @@
 import { Image } from "astro:assets";
 import srcSlider from "@/assets/images/HOME/slider/IMG-MODELO-BIENVENIDOS.webp";
 import bannerImg from "@/assets/images/HOME/slider/BANNER-BIENVENIDOS.webp";
+import bannerImgEng from "@/assets/images/HOME/slider/BANNER-WELCOME.webp";
 
 const { language } = Astro.props;
 
 const english = {
     titulo: "WELCOME",
+    bannerImg: bannerImgEng,
 };
 
 const espanol = {
     titulo: "BIENVENIDOS",
+    bannerImg: bannerImg,
 };
+
+const srcBanner = language === "es" ? espanol.bannerImg : english.bannerImg;
 ---
 
 <div class="h-[auto] pb-40">
     <div class="relative border-b-[15px] border-[#005240]">
-        <Image src={bannerImg} alt="Slider" />
+        <Image src={srcBanner} alt="Slider" />
         <div class="absolute top-0 right-0 max-w-[50vw] lg:max-w-full">
             <div class="p-10">
                 <Image
